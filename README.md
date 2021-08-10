@@ -1,16 +1,13 @@
 <div align="center">
     <h1>Desafio - Introdução ao SOLID 🚀</h1>
-    <h2>ChapterII | Trilha Node.js Ignite</h2>
+    <h2>Chapter II | Trilha Node.js Ignite</h2>
 </div>
 
-<div align="center">
-    <h2>👨‍💻 Tecnologias Utilizadas</h2>
-    <div align="center" style="display: inline_block"><br>
-        <img align="center" alt="Padupe-Node" height="40" width="40" src="https://github.com/devicons/devicon/blob/master/icons/nodejs/nodejs-original.svg">
-        <img align="center" alt="Padupe-Ts" height="40" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-plain.svg">
-        <img align="center" alt="Padupe-Jest" height="40" width="40" src="https://github.com/devicons/devicon/blob/master/icons/jest/jest-plain.svg">    
-        <img align="center" alt="Padupe-Git" height="40" width="40" src="https://github.com/devicons/devicon/blob/master/icons/git/git-original.svg">
-    </div>
+<div align="center" style="display: inline_block"><br>
+    <img align="center" alt="Padupe-Node" height="40" width="40" src="https://github.com/devicons/devicon/blob/master/icons/nodejs/nodejs-original.svg">
+    <img align="center" alt="Padupe-Ts" height="40" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-plain.svg">
+    <img align="center" alt="Padupe-Jest" height="40" width="40" src="https://github.com/devicons/devicon/blob/master/icons/jest/jest-plain.svg">
+    <img align="center" alt="Padupe-Git" height="40" width="40" src="https://github.com/devicons/devicon/blob/master/icons/git/git-original.svg">
 </div>
 
 📖[Descrição do Desafio](https://www.notion.so/Desafio-01-Introdu-o-ao-SOLID-3b9be286fac0482ca3b275473ddd2d72 "Descrição do Desafio")

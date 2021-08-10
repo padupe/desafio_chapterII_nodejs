@@ -2,14 +2,14 @@ import { User } from "../../model/User";
 import { IUsersRepository } from "../../repositories/IUsersRepository";
 
 interface IRequest {
-  user_id: User;
+  user_id: string;
 }
 
 class TurnUserAdminUseCase {
   constructor(private usersRepository: IUsersRepository) {}
 
   execute({ user_id }: IRequest): User {
-    const userADM = this.usersRepository.turnAdmin(user_id);
+    const userADM = this.usersRepository.findById(user_id);
 
     if (!userADM) {
       throw new Error("User not found!");

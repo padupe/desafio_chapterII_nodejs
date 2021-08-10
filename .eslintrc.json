@@ -18,7 +18,7 @@
   "plugins": ["@typescript-eslint", "eslint-plugin-import-helpers", "prettier"],
   "rules": {
     "camelcase": "off",
-    "prettier/prettier": "error",
+    "prettier/prettier": ["error", { "endOfLine": "auto" }],
     "import/no-unresolved": "error",
     "@typescript-eslint/naming-convention": [
       "error",
@@ -48,7 +48,6 @@
     "import-helpers/order-imports": [
       "warn",
       {
-        // example configuration
         "newlinesBetween": "always",
         "groups": ["module", "/^@shared/", ["parent", "sibling", "index"]],
         "alphabetize": { "order": "asc", "ignoreCase": true }

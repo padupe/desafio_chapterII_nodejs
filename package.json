@@ -2,6 +2,7 @@
   "name": "desafio",
   "version": "1.0.0",
   "main": "index.js",
+  "author": "paulopeixoto <peixoto.pauloeduardo@gmail.com>",
   "license": "MIT",
   "scripts": {
     "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts",

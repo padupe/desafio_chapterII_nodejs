@@ -10,9 +10,9 @@ class ShowUserProfileController {
 
     try {
       const getUser = this.showUserProfileUseCase.execute({ user_id });
-      return response.status(200).json({ getUser });
+      return response.status(200).json(getUser);
     } catch (error) {
-      return response.status(400).json({ error: "User not found!" });
+      return response.status(404).json({ error: "User not found!" });
     }
   }
 }

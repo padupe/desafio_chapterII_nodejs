@@ -18,6 +18,8 @@
   "plugins": ["@typescript-eslint", "eslint-plugin-import-helpers", "prettier"],
   "rules": {
     "camelcase": "off",
+    "no-extra-semi": 1,
+    "semi": 1,
     "prettier/prettier": ["error", { "endOfLine": "auto" }],
     "import/no-unresolved": "error",
     "@typescript-eslint/naming-convention": [

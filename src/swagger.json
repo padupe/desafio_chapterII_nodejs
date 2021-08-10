@@ -1,0 +1,217 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Desafio Chapter II - Node.js",
+    "description": "Desafio proposto durante o Capítulo II da Trilha Ignite da Rocketseat",
+    "version": "1.0.0",
+    "contact": {
+      "email": "peixoto.pauloeduardo@gmail.com"
+    },
+    "owner": "https://github.com/padupe"
+  },
+  "paths": {
+    "/users": {
+      "post": {
+        "tags": ["User"],
+        "summary": "Create a User",
+        "description": "Create a new User in API.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string"
+                  }
+                },
+                "example": {
+                  "name": "User Test",
+                  "email": "user@email.com"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "User Created with Successful"
+          },
+          "400": {
+            "description": "Error"
+          }
+        }
+      }
+    },
+    "/users/{user_id}/admin": {
+      "patch": {
+        "tags": ["User"],
+        "summary": "Make an Administrator user",
+        "description": "By informing the user ID, it will have administrator privileges in the API.",
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Returns the updated user",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "format": "uuid"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "admin": {
+                      "type": "boolean"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "User not found!"
+          }
+        }
+      }
+    },
+    "/users/{user_id}": {
+      "get": {
+        "tags": ["User"],
+        "summary": "Displays a User",
+        "description": "Takes user data and displays it on the screen.",
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns user data.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "format": "uuid"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "admin": {
+                      "type": "boolean",
+                      "default": false
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "User not found!"
+          }
+        }
+      }
+    },
+    "/": {
+      "get": {
+        "tags": ["User"],
+        "summary": "View the entire list of users",
+        "description": "It is only possible to access this endpoint if the requester has administrator privileges.",
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Return a list of all users.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "admin": {
+                        "type": "boolean",
+                        "default": false
+                      },
+                      "email": {
+                        "type": "string"
+                      },
+                      "created_at": {
+                        "type": "string"
+                      },
+                      "updated_at": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Unauthorize User!"
+          }
+        }
+      }
+    }
+  }
+}

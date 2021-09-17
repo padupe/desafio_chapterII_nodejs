@@ -38,7 +38,7 @@ $ yarn test
 Você pode conferir a documentação acessando o seguinte endereço em seu navegador:
 
 ```
-http://localhost:3333/desafio_api-docs
+localhost:3333/desafio_api-docs
 ```
 
 ---
